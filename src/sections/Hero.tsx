@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Database, Cpu, LayoutDashboard, Zap } from 'lucide-react';
+import { ArrowRight, Database, LayoutDashboard, Zap } from 'lucide-react';
 
 const Hero = () => {
     const scrollToContact = () => {
