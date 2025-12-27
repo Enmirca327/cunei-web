@@ -1,0 +1,11 @@
+src/App.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Footer.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Navbar.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Navbar.tsx(1,27): error TS6133: 'useEffect' is declared but its value is never read.
+src/sections/BentoGrid.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/sections/BentoGrid.tsx(3,10): error TS6133: 'Database' is declared but its value is never read.
+src/sections/Contact.tsx(4,1): error TS6133: 'cn' is declared but its value is never read.
+src/sections/Founder.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/sections/Hero.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/sections/TechStack.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/sections/TechStack.tsx(2,1): error TS6133: 'motion' is declared but its value is never read.

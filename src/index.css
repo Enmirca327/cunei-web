@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-cunei-dark: #0B0F19;
+  --color-cunei-bronze: #C5A059;
+  --color-cunei-cyan: #00D4FF;
+  --color-cunei-text: #E6E6E6;
+
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+
+  /* Animations */
+  --animate-marquee: marquee 50s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shine: shine 3s linear infinite;
+
+  /* Keyframes */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.0);
+    }
+
+    50% {
+      opacity: .8;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 200% center;
+    }
+
+    100% {
+      background-position: -200% center;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-cunei-dark text-cunei-text antialiased overflow-x-hidden selection:bg-cunei-cyan/30 selection:text-cunei-cyan;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Scrollbar Tecnológica */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cunei-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cunei-dark border border-cunei-text/20 rounded-full hover:bg-cunei-text/30;
+  }
+}
+
+@layer components {
+
+  /* Efecto Vidrio Premium (Navbar) */
+  .glass {
+    @apply bg-cunei-dark/80 backdrop-blur-md border-b border-white/5;
+  }
+
+  /* Tarjetas de Contenido (Legibles y Elegantes) */
+  .glass-card {
+    @apply bg-cunei-dark/90 backdrop-blur-sm border border-cunei-text/10 shadow-xl rounded-2xl;
+    @apply hover:border-cunei-bronze/40 hover:shadow-cunei-cyan/5 hover:-translate-y-1 transition-all duration-300;
+  }
+}
